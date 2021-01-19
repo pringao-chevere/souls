@@ -1,0 +1,12 @@
+[build]
+  functions = "funcs"
+
+
+[dev]
+  command = "npm run start"
+
+
+[[redirects]]
+  from = "/tokenData/*"
+  to = "/.netlify/functions/:splat"
+  status = 200

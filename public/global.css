@@ -1,0 +1,205 @@
+html, body {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	color: #333;
+	margin: 0;
+	padding: 8px;
+	box-sizing: border-box;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+
+a {
+	color: rgb(0,100,200);
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:visited {
+	color: rgb(0,80,160);
+}
+
+label {
+	display: block;
+}
+
+input, button, select, textarea {
+	font-family: inherit;
+	font-size: inherit;
+	-webkit-padding: 0.4em 0;
+	padding: 0.4em;
+	margin: 0 0 0.5em 0;
+	box-sizing: border-box;
+	border: 1px solid #ccc;
+	border-radius: 2px;
+}
+
+input:disabled {
+	color: #ccc;
+}
+
+button {
+	color: #333;
+	background-color: #f4f4f4;
+	outline: none;
+}
+
+button:disabled {
+	color: #999;
+}
+
+button:not(:disabled):active {
+	background-color: #ddd;
+}
+
+button:focus {
+	border-color: #666;
+}
+
+
+
+
+/*App.svelte*/
+
+.main_width{
+	max-width: 800px;
+}
+
+a{
+	color: #98d4ff;
+}
+.game-font{
+	font-family: "Press Start 2P", monospace, monospace;
+}
+.button{
+	color: white;
+	border: none;
+	background: none;
+	font-size: 4vw;
+}
+@media (min-width: 800px) {
+	.button{
+		font-size: 32px;
+	}
+}
+@media (max-width: 800px) {
+	h3{
+		font-size: 2.5vw;
+	}
+	p{
+		font-size: 2vw;
+	}
+	h5{
+		font-size: 1.7vw;
+	}
+	.my-soul-data{
+		font-size: 2vw;
+	}
+	.my-soul-image{
+		width: 40vw;
+		height: auto;
+	}
+}
+.button:active{
+	border: none;
+	background: none;
+	color: #f36767;
+	text-shadow:  -4px -2px #67f3da;
+	filter:blur(2px);
+}
+.button:hover{
+	color: #67f3da;
+	text-shadow:  4px 2px #f36767;
+	filter:blur(1px);
+}
+
+.glitch0{
+	text-shadow: none;
+}
+.glitch1{
+	color: rgba(255,255,255,0.2);
+
+	/*text-decoration: overline;*/
+	text-shadow:  2px 2px #f36767;
+
+	filter: blur(2px);
+}
+.glitch2{
+	color: rgba(255,255,255,0.2);
+	text-decoration: line-through;
+	text-shadow:  4px 2px #f36767;
+}
+.glitch3{
+	color: #67f3da;
+	text-shadow:  -2px -2px rgba(255,255,255,0.2);
+	/*text-decoration: underline;*/
+}
+.glitch4{
+	color: #67f3da;
+	text-decoration: line-through;
+	text-shadow:  -2px -4px rgba(255,255,255,0.2);
+	filter: blur(2px);
+}
+
+.image-glitch0{
+	text-shadow: none;
+}
+.image-glitch1{
+	filter: blur(2px);
+
+}
+.image-glitch2{
+	filter: saturate(50);
+	transform: scaleX(1.1);
+}
+.image-glitch3{
+	filter: grayscale(50);
+	transform: scaleY(1.1);
+	/*filter: drop-shadow(5px -5px 2px #f36767);*/
+}
+.image-glitch4{
+	filter: invert(80);
+}
+
+
+.bg-glitch0{
+
+}
+.bg-glitch1{
+	background: rgba(255,255,255,0.05);
+}
+.bg-glitch2{
+	background: rgba(93, 68, 68, 0.08);
+}
+.bg-glitch3{
+
+	background: rgba(221, 37, 37, 0.07);
+}
+.bg-glitch4{
+	background: rgba(255,255,255,0.08);
+}
+
+
+.grid-bg{
+	position: fixed;
+	width:100%;
+	height:100%;
+	top:0;
+	left:0;
+	z-index: -1;
+	display: flex;
+	align-content: stretch;
+	flex-direction: column;
+	background-image: linear-gradient(#222222, #333333, #222222);
+}
+.grid-item{
+	width:100%;
+	height: 4vh;
+	filter: blur(1rem);
+}
