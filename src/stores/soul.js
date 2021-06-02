@@ -102,6 +102,8 @@ async function processPastEvents(){
 }
 
 
+
+
 export async function separate(){
     console.log('do separation');
     separating.set(true);

@@ -2,6 +2,20 @@
     import {address, ENS, unlocked,unlock,correct_network,wallet_injected} from "./stores/wallet.js";
     import {connect, balance, exorcised, not_myself,waiting,separate, update, separating,contract_address,image} from "./stores/soul";
 
+    import {Skwid} from "./stores/test";
+
+    function doTest(){
+        try{
+            let tokenId = 5;
+            let hash = "0x0692fa1183ad041b40e0fbcab7f965875b1b14dcca44423fb86db3433454a1c0";
+            let atomicNumber = 12;
+            let quality = 1;
+            Skwid(tokenId,hash,atomicNumber,quality);
+        }catch(e){
+            alert(e);
+        }
+    }
+
     let r = 0, j = 0;
     let glitches = [0,0,0,0,0,0,0,0,0,0];
     let glitch_rows = [];
@@ -70,6 +84,8 @@
         <div class="grid-item {glitch_rows[row]}">&nbsp;</div>
     {/each}
 </div>
+
+
 
 
 
@@ -165,3 +181,6 @@
 
 
 
+<button on:click={doTest}>
+    Test
+</button>
