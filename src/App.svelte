@@ -2,16 +2,11 @@
     import {address, ENS, unlocked,unlock,correct_network,wallet_injected} from "./stores/wallet.js";
     import {connect, balance, exorcised, not_myself,waiting,separate, update, separating,contract_address,image} from "./stores/soul";
 
-    // import {Skwid} from "./stores/test";
 
     function doTest(){
         try{
             // // setTimeout(()=>{
-            //     let tokenId = 5;
-            //     let hash = "0x0692fa1183ad041b40e0fbcab7f965875b1b14dcca44423fb86db3433454a1c0";
-            //     let atomicNumber = 12;
-            //     let quality = 1;
-            //     Skwid(tokenId,hash,atomicNumber,quality);
+
             // // },100);
 
             let j = 0;
@@ -203,6 +198,6 @@
 
 
 
-<button on:click={doTest}>
-    Test 23
-</button>
+<!--<button on:click={doTest}>-->
+<!--    Test 23-->
+<!--</button>-->
