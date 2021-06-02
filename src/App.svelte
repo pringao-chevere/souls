@@ -6,13 +6,13 @@
 
     function doTest(){
         try{
-            setTimeout(()=>{
+            // setTimeout(()=>{
                 let tokenId = 5;
                 let hash = "0x0692fa1183ad041b40e0fbcab7f965875b1b14dcca44423fb86db3433454a1c0";
                 let atomicNumber = 12;
                 let quality = 1;
                 Skwid(tokenId,hash,atomicNumber,quality);
-            },100);
+            // },100);
 
             // let a = new AudioContext();
             // a.gainNode = a.createGain();
