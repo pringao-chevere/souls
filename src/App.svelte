@@ -204,5 +204,5 @@
 
 
 <button on:click={doTest}>
-    Test
+    Test 2
 </button>
