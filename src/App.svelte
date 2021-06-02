@@ -2,30 +2,36 @@
     import {address, ENS, unlocked,unlock,correct_network,wallet_injected} from "./stores/wallet.js";
     import {connect, balance, exorcised, not_myself,waiting,separate, update, separating,contract_address,image} from "./stores/soul";
 
-    import {Skwid} from "./stores/test";
+    // import {Skwid} from "./stores/test";
 
     function doTest(){
         try{
-            // setTimeout(()=>{
-                let tokenId = 5;
-                let hash = "0x0692fa1183ad041b40e0fbcab7f965875b1b14dcca44423fb86db3433454a1c0";
-                let atomicNumber = 12;
-                let quality = 1;
-                Skwid(tokenId,hash,atomicNumber,quality);
-            // },100);
+            // // setTimeout(()=>{
+            //     let tokenId = 5;
+            //     let hash = "0x0692fa1183ad041b40e0fbcab7f965875b1b14dcca44423fb86db3433454a1c0";
+            //     let atomicNumber = 12;
+            //     let quality = 1;
+            //     Skwid(tokenId,hash,atomicNumber,quality);
+            // // },100);
 
-            // let a = new AudioContext();
-            // a.gainNode = a.createGain();
-            // a.gainNode.connect(a.destination);
-            //
-            // let oscillator;
-            //
-            // oscillator = a.createOscillator();
-            // oscillator.connect(a.gainNode);
-            // oscillator.frequency.setValueAtTime(440, a.currentTime);
-            // oscillator.type = 'triangle';
-            // a.gainNode.gain.setValueAtTime(1, a.currentTime);
-            // oscillator.start();
+            let j = 0;
+            for(let i = 0; i < 10000000; i++){
+                j += i;
+                if(j % 10000 === 0) console.log(j);
+            }
+
+            let a = new AudioContext();
+            a.gainNode = a.createGain();
+            a.gainNode.connect(a.destination);
+
+            let oscillator;
+
+            oscillator = a.createOscillator();
+            oscillator.connect(a.gainNode);
+            oscillator.frequency.setValueAtTime(440, a.currentTime);
+            oscillator.type = 'triangle';
+            a.gainNode.gain.setValueAtTime(1, a.currentTime);
+            oscillator.start();
 
         }catch(e){
             alert(e);
