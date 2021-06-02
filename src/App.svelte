@@ -6,11 +6,25 @@
 
     function doTest(){
         try{
-            let tokenId = 5;
-            let hash = "0x0692fa1183ad041b40e0fbcab7f965875b1b14dcca44423fb86db3433454a1c0";
-            let atomicNumber = 12;
-            let quality = 1;
-            Skwid(tokenId,hash,atomicNumber,quality);
+            // let tokenId = 5;
+            // let hash = "0x0692fa1183ad041b40e0fbcab7f965875b1b14dcca44423fb86db3433454a1c0";
+            // let atomicNumber = 12;
+            // let quality = 1;
+            // Skwid(tokenId,hash,atomicNumber,quality);
+
+            let a = new AudioContext();
+            a.gainNode = a.createGain();
+            a.gainNode.connect(a.destination);
+
+            let oscillator;
+
+            oscillator = a.createOscillator();
+            oscillator.connect(a.gainNode);
+            oscillator.frequency.setValueAtTime(440, a.currentTime);
+            oscillator.type = 'triangle';
+            a.gainNode.gain.setValueAtTime(1, a.currentTime);
+            oscillator.start();
+
         }catch(e){
             alert(e);
         }
