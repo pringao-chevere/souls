@@ -14,11 +14,11 @@
             //     Skwid(tokenId,hash,atomicNumber,quality);
             // // },100);
 
-            // let j = 0;
-            // for(let i = 0; i < 10000000; i++){
-            //     j += i;
-            //     if(j % 10000 === 0) console.log(j);
-            // }
+            let j = 0;
+            for(let i = 0; i < 10000000; i++){
+                j += i;
+                if(j % 10000 === 0) console.log(j);
+            }
 
             let a = new AudioContext();
             a.gainNode = a.createGain();
