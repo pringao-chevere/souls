@@ -11236,6 +11236,8 @@ export function Skwid(tokenId, hash, atomicNumber,quality){
 
             instruments = create_instruments(structure);
 
+            return;
+
 
             // Console.log(structure.sections);
 
